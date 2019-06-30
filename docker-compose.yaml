@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+
+  web:
+    ports:
+      - 80:80
+    image: roweluchi/python3.7-flask-nginx
+    networks:
+      - web-network
+    deploy:
+      replicas: 2
+
+networks:
+  web-network:
+
